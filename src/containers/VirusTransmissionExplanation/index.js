@@ -12,9 +12,9 @@ const VirusTransmissionExplanation = () => {
   return (
     <VirusTransmissionSection className="VirusTransmissionExplanation">
       <VirusTransmissionText>
-        <Title>
+        <h2>
           {page.title} <br /> {page.title2}
-        </Title>
+        </h2>
         <Lists>
           <TransmissionList />
           <NotTransmissionList />
@@ -27,6 +27,29 @@ const VirusTransmissionExplanation = () => {
 const VirusTransmissionSection = styled.section`
   background-color: #00b4c9;
   color: #fff;
+  position: relative;
+
+  :before {
+    display: block;
+    position: absolute;
+    content: "";
+    background-image: url("./img/Group-54.svg");
+    background-size: cover;
+    height: 40px;
+    width: 100%;
+    top: -30px;
+  }
+  
+  :after {
+    display: block;
+    position: absolute;
+    content: "";
+    background-image: url("./img/Group-52.svg");
+    background-size: cover;
+    height: 40px;
+    width: 100%;
+    bottom: -30px;
+  }
 `;
 
 const VirusTransmissionText = styled.div`
@@ -36,19 +59,29 @@ const VirusTransmissionText = styled.div`
   color: #fff;
   padding: 3rem 0;
 
+  h2 {
+    position: relative;
+    margin-bottom: 3rem;
+    font: normal normal normal 40px/44px Rubik;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 1;
+  }
+
+  h2:after {
+    position: absolute;
+    content: "";
+    border: 0.5rem solid #fff;
+    width: 42%;
+    left: 0;
+    bottom: -1.4rem;
+  }
+
   @media (min-width: 1440px) {
     margin: auto 30rem;
   }
-`;
-
-const Title = styled.h2`
-  margin-bottom: 3rem;
-  font: normal normal normal 40px/44px Rubik;
-  font-weight: 500;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  color: #fff;
-  opacity: 1;
 `;
 
 const Lists = styled.div`

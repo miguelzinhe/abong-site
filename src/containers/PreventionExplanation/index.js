@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import PreventionCarousel from '../../components/PreventionCarousel/PreventionCarousel';
 
 const PreventionExplanation = () => {
   const page = {
@@ -9,28 +10,49 @@ const PreventionExplanation = () => {
   };
   return (
     <PreventionExplanationSection className="PreventionExplanation">
-        <Title>
+      <PreventionText className="PreventionText">
+        <h2>
           {page.title} <br /> {page.title2}
-        </Title>
+        </h2>
         <Text>{page.description}</Text>
+      </PreventionText>
+      <PreventionCarousel />
     </PreventionExplanationSection>
   );
 }
 
 const PreventionExplanationSection = styled.section`
+  position: relative;
+  padding-bottom: 4rem;
+`;
+
+const PreventionText = styled.div`
   margin: auto 3rem;
   color: #00b4c9;
   padding: 3rem 0;
+  margin-bottom: 3rem;
+
+  h2 {
+    position: relative;
+    font: normal normal normal 40px/44px Rubik;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+
+  h2:after {
+    position: absolute;
+    content: "";
+    border: 0.5rem solid #00b4c9;
+    width: 42%;
+    left: 0;
+    bottom: -1.4rem;
+  }
 
   @media (min-width: 1440px) {
     margin: auto 30rem;
+    margin-bottom: 3rem;
   }
-`;
-
-const Title = styled.h2`
-  font: normal normal normal 40px/44px Rubik;
-  font-weight: 500;
-  margin-bottom: 3rem;
 `;
 
 const Text = styled.p`

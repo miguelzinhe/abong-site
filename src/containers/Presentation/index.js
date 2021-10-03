@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import PresentationImage from "../../images/presentation-img.png";
 
 const Presentation = () => {
   return (
@@ -19,7 +20,8 @@ const Presentation = () => {
         </p>
 
         <p>
-          A Cartilha <b>“O enfrentamento à epidemia da aids e a defesa da democracia”</b> e
+          A Cartilha{" "}
+          <b>“O enfrentamento à epidemia da aids e a defesa da democracia”</b> e
           este site compõem um chamado a todo conjunto de associadas da ABONG a
           defender a politica de AIDS, saúde integral e defesa do SUS.
         </p>
@@ -29,6 +31,9 @@ const Presentation = () => {
           plena e o combate a criminalização dos movimentos sociais.
         </p>
       </PresentationText>
+      <PresentationFooter>
+        <img src={PresentationImage} alt="Logo" />
+      </PresentationFooter>
     </PresentationSection>
   );
 }
@@ -37,11 +42,32 @@ const PresentationSection = styled.section`
   display: inline-block;
 `;
 
+const PresentationFooter = styled.section`
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  :before {
+    display: block;
+    position: absolute;
+    content: "";
+    background-image: url("./img/presentation-bg.svg");
+    background-size: cover;
+    height: 40px;
+    width: 100%;
+    top: -30px;
+  }
+`;
+
 const PresentationText = styled.section` 
   font: normal normal normal 28px/32px Rubik;
-  margin: auto 3rem;
+  margin: 0 3rem;
   color: #ff2d23;
-  padding: 3rem 0;
+  padding: 4rem 0 10rem 0;
 
   p + p {
     margin-top: 2rem;

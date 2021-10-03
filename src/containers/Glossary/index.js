@@ -4,11 +4,13 @@ import styled from "styled-components";
 const Glossary = () => {
   return (
     <GlossarySection>
-      <div className="glossary-text">
-        <h2>
-          O BE A BA DA AIDS
+      <div className="glossary-wrapper">
+        <h2 className="glossary-title">
+          <span>
+            O BE A <br /> BA DA <br /> AIDS
+          </span>
         </h2>
-        <div>
+        <div className="glossary-text">
           <h4>O que é HIV?</h4>
           <p>
             HIV é o nome do vírus que dá origem à AIDS e que é conhecido
@@ -38,38 +40,73 @@ const GlossarySection = styled.section`
   font: normal normal normal 28px/32px Rubik;
   color: #00b4c9;
 
-  @media (min-width: 1440px) {
-    margin: 3rem 30rem;
-  }
-
-  h2 {
-    display: inline-block;
-    border-bottom: 1.4rem solid #00b4c9;
-    text-align: left;
+  .glossary-title {
     font: normal normal normal 80px/80px Rubik;
-    letter-spacing: 0px;
-    opacity: 1;
     font-weight: 500;
+    letter-spacing: 0px;
+    text-align: left;
   }
 
-  div > div {
-    margin-left: 6rem;
+  .glossary-wrapper {
+    padding: 4rem 0 8rem 0;
   }
 
-  h4 {
+  .glossary-title span {
+    display: inline-block;
+    border-bottom: 0.8rem solid #00b4c9;
+  }
+
+  .glossary-text {
+    position: relative;
+    padding-right: 2rem;
+  }
+
+  .glossary-text h4 {
     font: normal normal bold 18px/24px Rubik;
     letter-spacing: 0px;
     text-transform: uppercase;
   }
 
-  p {
+  .glossary-text p {
     text-align: left;
     font: normal normal normal 18px/24px Rubik;
     letter-spacing: 0px;
   }
 
-  .glossary-text {
-    display: flex;
+  .glossary-text p + h4 {
+    margin-top: 1rem;
+  } 
+  
+  .glossary-text:after {
+    content: "";
+    width: 0;
+    height: 60%;
+    position: absolute;
+    border: 0.5rem solid #00b4c9;
+    background-color: #00b4c9;
+    top: 20px;
+    right: 0;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 3rem 30rem;
+
+    .glossary-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .glossary-title {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    .glossary-text {
+      grid-column: 3 / 10;
+      grid-row: 1;
+    }
   }
 `;
 
