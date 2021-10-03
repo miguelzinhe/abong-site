@@ -69,7 +69,7 @@ const AdvocacyHeader = styled.section`
     display: block;
     position: absolute;
     content: "";
-    background: url("./img/advocacy/advocacy-bg.svg") top no-repeat;
+    background: url("./img/advocacy-bg.svg") top no-repeat;
     background-size: cover;
     height: 20px;
     width: 100%;
@@ -81,7 +81,7 @@ const AdvocacyHeader = styled.section`
     display: block;
     position: absolute;
     content: "";
-    background: url("./img/advocacy/advocacy-bg.svg") bottom no-repeat;
+    background: url("./img/advocacy-bg.svg") bottom no-repeat;
     background-size: cover;
     height: 70px;
     width: 100%;

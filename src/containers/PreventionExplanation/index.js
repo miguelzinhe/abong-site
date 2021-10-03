@@ -23,6 +23,7 @@ const PreventionExplanation = () => {
 
 const PreventionExplanationSection = styled.section`
   position: relative;
+  padding-top: 5rem;
   padding-bottom: 4rem;
 `;
 
