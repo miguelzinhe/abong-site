@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from "./containers/Header";
 import Advocacy from './containers/Advocacy';
 import Glossary from './containers/Glossary';
 import Presentation from './containers/Presentation';
@@ -10,6 +11,7 @@ import VirusTransmissionExplanation from './containers/VirusTransmissionExplanat
 function App() {
   return (
     <main className="App">
+      <Header />
       <Presentation />
       <Timeline />
       <Glossary />
