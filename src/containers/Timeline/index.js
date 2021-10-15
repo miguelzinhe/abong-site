@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PesteGayImg from "../../images/peste-gay.png";
 import Hemoglobine from "../../images/hemoglobine.png";
 
 const Timeline = () => {
@@ -33,6 +34,11 @@ const Timeline = () => {
               de aids no país: “Brasil registra dois casos de câncer gay”.
             </p>
           </div>
+
+          <div className="timeline-img">
+            <img src={PesteGayImg} alt="Logo" />
+          </div>
+
           <div className="years">
             <h4>
               <span>1985</span>
@@ -117,6 +123,7 @@ const TimelineSection = styled.section`
 
   .years {
     display: flex;
+    flex-direction: column;
     margin-bottom: 3rem;
   }
 
@@ -132,10 +139,16 @@ const TimelineSection = styled.section`
 
   .years p {
     font: normal normal normal 22px/28px Rubik;
-    padding-left: 4rem;
+    margin-top: 2rem;
   }
 
-  @media (min-width: 1440px) {
+  @media (max-width: 768px) {
+    .timeline-img img {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 762px) {
     .years {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -151,6 +164,19 @@ const TimelineSection = styled.section`
     .years p {
       grid-column: 2 / 4;
       grid-row: 1 /2;
+      padding-left: 4rem;
+      margin-top: 0;
+    }
+
+    .timeline-img {
+      text-align: right;
+      margin-bottom: 10rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .timeline-img img {
+      margin-right: -8.5rem;
     }
   }
 `;
@@ -187,38 +213,49 @@ const FirstFaseText = styled.div`
   padding-top: 4rem;
   padding-bottom: 2rem;
 
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
   .wrapper h2 {
-    font: normal normal normal 120px/110px Rubik;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    font: normal normal normal 80px/80px Rubik;
     font-weight: 500;
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
   }
 
+  .wrapper h3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    font: normal normal normal 30px/32px Rubik;
+    font-weight: 800;
+    text-align: right;
+    border: none;
+  }
+
+  @media (min-width: 768px) {
+
+  .wrapper h2 {
+    font: normal normal normal 130px/120px Rubik;
+    font-weight: 500;
+  }
+
+  .wrapper h3 {
+    font: normal normal normal 40px/42px Rubik;
+    font-weight: 800;
+  }
+  
+  }
+
   @media (min-width: 1440px) {
     margin: auto 30rem;
 
-    .wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      grid-auto-rows: minmax(100px, auto);
-    }
-
-    .wrapper h3 {
-      font: normal normal normal 40px/42px Rubik;
-      font-weight: 800;
-      text-align: right;
-      border: none;
-      grid-column: 3 / 4;
-      grid-row: 1 / 2;
-    }
-
-    .wrapper h2 {
-      grid-column: 1 / 4;
-      grid-row: 1;
-    }
-  }
 `;
 
 const SecondFase = styled.div`

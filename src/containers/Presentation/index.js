@@ -18,7 +18,12 @@ const Presentation = () => {
         </div>
 
         <div className="container-fluid">
-          <img className="encontro-img" src={EncontroNacionalImg} alt="Logo" />
+        
+          <img
+            className="encontro-img"
+            src={EncontroNacionalImg}
+            alt="4º Encontro Nacional"
+          />
 
           <p>
             Em tempos tão sombrios em que o conservadorismo age reforçando
@@ -29,7 +34,7 @@ const Presentation = () => {
         </div>
 
         <div className="container">
-          <img className="ato-img" src={AtoImg} alt="Logo" />
+          <img className="ato-img" src={AtoImg} alt="Ato" />
 
           <p>
             A Cartilha{" "}
@@ -53,15 +58,6 @@ const Presentation = () => {
 }
 
 const PresentationSection = styled.section`
-  display: inline-block;
-
-  .ato-img {
-    margin: 5.3rem 0;
-  }
-
-  .encontro-img {
-    margin: 4.1rem 0;
-  }
 `;
 
 const PresentationFooter = styled.section`
@@ -88,13 +84,26 @@ const PresentationFooter = styled.section`
 const PresentationText = styled.section`
   font: normal normal normal 28px/32px Rubik;
   color: #ff2d23;
-  padding: 10rem 0;
+  margin: auto 2rem;
+  padding: 6rem 0;
 
   p + p {
     margin-top: 2rem;
   }
 
+  .ato-img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .encontro-img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
   @media (min-width: 1440px) {
+    padding: 10rem 0;
+
     .container {
       margin: 0 30rem;
     }
@@ -107,6 +116,14 @@ const PresentationText = styled.section`
     .container-fluid p {
       width: 40%;
       text-align: left;
+    }
+
+    .ato-img {
+      margin: 5.3rem 0;
+    }
+
+    .encontro-img {
+      margin: 4.1rem 0;
     }
   }
 `;

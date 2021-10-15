@@ -17,7 +17,7 @@ const TransmissionList = () => {
   
 
   return (
-    <div className="TransissionList">
+    <div className="TransmissionList">
       <h4 className="TransmissionList-Title">Transmitido:</h4>
       <ul className="TransmissionList-List">{transmissionList}</ul>
     </div>
