@@ -147,6 +147,10 @@ const Lists = styled.div`
       left: 20px;
     }
 
+    .TransmissionList:before {
+      display: none;
+    }
+
     .NotTransmissionList:before {
       display: inline-block;
       position: absolute;

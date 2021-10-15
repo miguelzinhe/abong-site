@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import PresentationFooterImg from "../../images/presentation-img.png";
 import EncontroNacionalImg from "../../images/encontro-nacional.png";
 import AtoImg from "../../images/ato.png";
-
 
 const Presentation = () => {
   return (
@@ -18,7 +17,6 @@ const Presentation = () => {
         </div>
 
         <div className="container-fluid">
-        
           <img
             className="encontro-img"
             src={EncontroNacionalImg}
@@ -55,10 +53,9 @@ const Presentation = () => {
       </PresentationFooter>
     </PresentationSection>
   );
-}
+};
 
-const PresentationSection = styled.section`
-`;
+const PresentationSection = styled.section``;
 
 const PresentationFooter = styled.section`
   position: relative;
@@ -91,14 +88,16 @@ const PresentationText = styled.section`
     margin-top: 2rem;
   }
 
-  .ato-img {
-    width: 100%;
-    margin: 2rem 0;
-  }
+  @media (max-width: 1440px) {
+    .ato-img {
+      width: 100%;
+      margin: 2rem 0;
+    }
 
-  .encontro-img {
-    width: 100%;
-    margin: 2rem 0;
+    .encontro-img {
+      width: 100%;
+      margin: 2rem 0;
+    }
   }
 
   @media (min-width: 1440px) {
