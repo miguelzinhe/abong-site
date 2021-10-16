@@ -125,6 +125,7 @@ const AdvocacyText = styled.div`
   ul {
     margin-top: 2rem;
     list-style: none;
+    margin: 2rem 1rem;
   }
 
   li {

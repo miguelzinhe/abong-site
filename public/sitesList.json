@@ -40,13 +40,8 @@
     "site_url": "https://abiaids.org.br"
   },
   {
-    "id": "youtube-channel",
-    "name": "https://www.youtube.com/channel/UCcg2yzyxjl1Lc8LMjo6y1Tg",
-    "site_url": "https://www.youtube.com/channel/UCcg2yzyxjl1Lc8LMjo6y1Tg"
-  },
-  {
     "id": "boa-sorte",
-    "name": "PROJETO BOA SORTE",
-    "site_url": "https://"
+    "name": "Projeto Boa Sorte (Youtube)",
+    "site_url": "https://www.youtube.com/channel/UCcg2yzyxjl1Lc8LMjo6y1Tg"
   }
 ]
