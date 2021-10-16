@@ -92,6 +92,13 @@ const AdvocacyHeader = styled.section`
   img {
     z-index: 1000;
   }
+
+  @media (max-width: 982px) {
+    img {
+      width: 100%;
+      padding: 5rem 2rem;
+    }
+  }
 `;
 
 const AdvocacyText = styled.div`
