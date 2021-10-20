@@ -108,8 +108,8 @@ const Lists = styled.div`
     background-size: cover;
     height: 80px;
     width: 80px;
-    top: -30px;
-    right: 20px;
+    top: -60px;
+    right: 0;
   }
 
   .NotTransmissionList:before {
@@ -121,7 +121,7 @@ const Lists = styled.div`
     height: 80px;
     width: 80px;
     bottom: 20px;
-    right: 50px;
+    right: 0;
   }
 
   @media (min-width: 766px) {

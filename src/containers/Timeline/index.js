@@ -223,7 +223,7 @@ const FirstFaseText = styled.div`
   .wrapper h2 {
     grid-column: 1 / 4;
     grid-row: 1;
-    font: normal normal normal 80px/80px Rubik;
+    font: normal normal normal 60px/60px Rubik;
     font-weight: 500;
     text-align: left;
     text-transform: uppercase;
@@ -233,7 +233,7 @@ const FirstFaseText = styled.div`
   .wrapper h3 {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    font: normal normal normal 30px/32px Rubik;
+    font: normal normal normal 23px/25px Rubik;
     font-weight: 800;
     text-align: right;
     border: none;
@@ -255,7 +255,7 @@ const FirstFaseText = styled.div`
 
   @media (min-width: 1440px) {
     margin: auto 30rem;
-
+  }
 `;
 
 const SecondFase = styled.div`
