@@ -71,7 +71,14 @@ const HeaderSection = styled.section`
 
     :after {
       display: block;
-      bottom: -35px;
+      bottom: -130px;
+      position: absolute;
+      content: "";
+      background: url("./img/header-border.svg") bottom no-repeat;
+      background-size: cover;
+      height: 40px;
+      width: 100%;
+      z-index: 0;
     }
   }
 `;
