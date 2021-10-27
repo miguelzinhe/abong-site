@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import "slick-carousel/slick/slick.css";
@@ -28,11 +28,21 @@ const PreventionCarousel = () => {
     },
   ];
 
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    function resizeListener(){
+      setWidth(window.innerWidth)
+    }
+
+    window.addEventListener("resize", resizeListener)
+  })
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: width > 1200 ? 3 : 1,
     slidesToScroll: 1,
     arrows: false,
   };
