@@ -1,34 +1,68 @@
 import React from 'react';
-import { useState, useEffect } from "react";
 import SitesList from '../../components/SitesList/SitesList';
 import styled from 'styled-components';
 import AdvocacyImage from "../../images/advocacy-img.png";
 
 const Advocacy = () => {
-  const [sites, setSites] = useState([]);
 
-  const getSite = () => {
-    fetch("sitesList.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        setSites(myJson)
-      });
+  const sites = [
+    {
+      "id": "RNP+",
+      "name": "Rede Nacional de Pessoas Vivendo com HIV/Aids (RNP+)",
+      "site_url": "https://"
+    },
+    {
+      "id": "MNCP",
+      "name": "Movimento Nacional das Cidadãs Posithivas (MNCP)",
+      "site_url": "https://"
+    },
+    {
+      "id": "soropositivo.org",
+      "name": "www.soropositivo.org",
+      "site_url": "https://"
+    },
+    {
+      "id": "agenciaaids.com.br",
+      "name": "www.agenciaaids.com.br",
+      "site_url": "https://"
+    },
+    {
+      "id": "apta.org.br",
+      "name": "www.apta.org.br",
+      "site_url": "https://"
+    },
+    {
+      "id": "aids.gov.br",
+      "name": "www.aids.gov.br",
+      "site_url": "https://www.aids.gov.br"
+    },
+    {
+      "id": "unaids.org.br",
+      "name": "www.unaids.org.br",
+      "site_url": "https://unaids.org.br"
+    },
+    {
+      "id": "abiaids.org.br",
+      "name": "https://www.abiaids.org.br",
+      "site_url": "https://abiaids.org.br"
+    },
+    {
+      "id": "boa-sorte",
+      "name": "Projeto Boa Sorte (Youtube)",
+      "site_url": "https://www.youtube.com/channel/UCcg2yzyxjl1Lc8LMjo6y1Tg"
+    }
+  ]
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = `cartilha.pdf`;
+    link.href = "./assets/cartilha.pdf";
+    link.click();
   };
-  useEffect(() => {
-    getSite();
-  }, []);
 
   return (
     <AdvocacySection>
       <AdvocacyHeader>
-        <img src={AdvocacyImage} alt="Logo" />;
+        <img src={AdvocacyImage} alt="Logo" />
       </AdvocacyHeader>
       <AdvocacyText>
         <h2>
@@ -47,23 +81,43 @@ const Advocacy = () => {
             return <SitesList key={site.id} site={site} />;
           })}
         </ul>
+          <Download>
+            <button className="download" onClick={onDownload}>
+              Baixe agora a Cartilha
+            </button>
+          </Download>
       </AdvocacyText>
     </AdvocacySection>
   );
 };
 
+const Download = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+
+  .download {
+    background-color: transparent;
+    padding: 10px 30px;
+    border: 0.3rem solid #f39626;
+    color: #f39626;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+`
+
 const AdvocacySection = styled.section`
   margin-top: 4rem;
-  padding-bottom: 5rem;
+  height: 100%;
 `;
 
-const AdvocacyHeader = styled.section`
+const AdvocacyHeader = styled.div`
   position: relative;
   background-color: #f39626;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10rem 0;
 
   :before {
     display: block;
@@ -95,18 +149,20 @@ const AdvocacyHeader = styled.section`
 
   @media (max-width: 982px) {
     img {
-      width: 100%;
       padding: 5rem 2rem;
     }
   }
 `;
 
 const AdvocacyText = styled.div`
-  margin: auto 3rem;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  font: normal normal normal 28px/32px Rubik;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  font-size: 1.125rem;
   color: #f39626;
+
+  @media (min-width: 720px) {
+    width: 70vw;
+  }
 
   h2 {
     position: relative;
@@ -145,7 +201,7 @@ const AdvocacyText = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin: auto 30rem;
+    margin: auto 15rem;
   }
 `;
 

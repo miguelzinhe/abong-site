@@ -25,9 +25,14 @@ const VirusTransmissionExplanation = () => {
 };
 
 const VirusTransmissionSection = styled.section`
+  align-items: center;
   background-color: #00b4c9;
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   position: relative;
+  width: 100vw;
 
   :before {
     display: block;
@@ -57,7 +62,10 @@ const VirusTransmissionText = styled.div`
   font: normal normal normal 18px/24px Rubik;
   background-color: #00b4c9;
   color: #fff;
-  padding: 5rem 0; 
+  padding: 5rem 0;
+  @media (min-width: 720px) {
+    width: 70vw;
+  }
 
   h2 {
     position: relative;
@@ -80,7 +88,7 @@ const VirusTransmissionText = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin: auto 30rem;
+    margin: auto 15rem;
   }
 `;
 
@@ -94,6 +102,10 @@ const Lists = styled.div`
   h4 {
     font: normal normal bold 18px/24px Rubik;
     text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.125rem;
   }
 
   ul {

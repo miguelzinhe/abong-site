@@ -23,15 +23,23 @@ const PreventionExplanation = () => {
 
 const PreventionExplanationSection = styled.section`
   position: relative;
-  padding-top: 5rem;
-  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8rem;
 `;
 
 const PreventionText = styled.div`
-  margin: auto 3rem;
+  margin: 0 auto;
   color: #00b4c9;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 720px) {
+    width: 70vw;
+  }
 
   h2 {
     position: relative;
@@ -51,13 +59,13 @@ const PreventionText = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin: auto 30rem;
+    margin: auto 15rem;
     margin-bottom: 3rem;
   }
 `;
 
 const Text = styled.p`
-  font: normal normal normal 22px/28px Rubik;
+  font-size: 1.125rem;
 `;
 
 export default PreventionExplanation;

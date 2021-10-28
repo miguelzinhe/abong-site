@@ -1,8 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
 import styled from "styled-components";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const GlossaryCarousel = () => {
   const GlossaryItems = [
@@ -18,44 +15,43 @@ const GlossaryCarousel = () => {
     },
   ];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: false,
-  };
-
   return (
     <GlossaryList>
-      <Slider {...settings}>
-        {GlossaryItems.map((item) => {
-          return (
-            <div className="glossary-item">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          );
-        })}
-      </Slider>
+      {GlossaryItems.map((item) => {
+        return (
+          <div className="glossary-item">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        );
+      })}
     </GlossaryList>
   );
 };
 
-const GlossaryList = styled.section`
+const GlossaryList = styled.div`
   color: #00b4c9;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-right: 0.5rem solid #00b4c9;
+  @media (min-width: 720px) {
+    max-height: 600px;
+  }
 
   .glossary-item {
-    font: normal normal normal 16px/24px Rubik;
-    padding: 0 2rem;
-    border-right: 0.5rem solid #00b4c9;
+    font: normal Rubik;
+    padding: 0 1rem;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 1.125rem;
   }
 
   .glossary-item h3 {
     text-transform: uppercase;
-    font: normal normal normal 16px/24px Rubik;
+    font: normal Rubik;
     font-weight: 700;
+    font-size: 1.125rem;
   }
 
   .slick-dots {

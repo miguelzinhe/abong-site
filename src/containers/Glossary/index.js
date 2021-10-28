@@ -6,41 +6,58 @@ import GlossaryCarousel from "../../components/GlossaryCarousel";
 const Glossary = () => {
   return (
     <GlossarySection>
+      <div className="glossaryWrapper">
       <h2 className="glossary-title">
-        <span> O BE A BA DA AIDS </span>
+        <span> O BE A <br/> BA DA AIDS </span>
       </h2>
       <GlossaryCarousel />
+      </div>
     </GlossarySection>
   );
 };
 
 const GlossarySection = styled.section`
-  margin: 3rem 3rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
   font: normal normal normal 28px/32px Rubik;
   color: #00b4c9;
+  padding: 3rem 0;
+  align-items: center;
+
+  .glossaryWrapper {
+    @media (min-width: 720px) {
+      width: 70vw;
+    }
+  
+    display: flex;
+    @media (max-width: 982px) {
+      flex-wrap: wrap;
+    }
+  }
 
   .glossary-title {
     position: relative;
-    font: normal 75px/75px Rubik;
+    font: normal 5rem/5rem Rubik;
     font-weight: 500;
     letter-spacing: 0px;
     text-align: left;
     padding-bottom: 1rem;
     margin-bottom: 4rem;
+    width: 100%;
+    padding: 0 1rem;
   }
 
-  .glossary-title:after {
-    position: absolute;
-    content: "";
-    border: 0.5rem solid #00b4c9;
-    width: 42%;
-    left: 0;
-    bottom: -1.4rem;
-  }
-
-  @media (min-width: 1440px) {
-    margin: 3rem 30rem;
-
+  @media (min-width: 1000px) {
+    .glossary-title span:after {
+      position: absolute;
+      content: "";
+      border: 0.5rem solid #00b4c9;
+      width: 60%;
+      left: 0;
+      top: 16rem;
+      margin: 0 1rem;
+    }
   }
 `;
 

@@ -13,3 +13,12 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+#fp-nav.fp-left {
+  left: 10vw !important;
+  top: 27% !important;
+}
+
+#fp-nav ul li, .fp-slidesNav ul li {
+  width: 20px !important;
+}

@@ -14,7 +14,7 @@ const NotTransmissionList = () => {
   ];
 
   const notTransmissionList = notTransmissions.map((notTransmission) => {
-    return <li>{notTransmission}</li>;
+    return <li><p>{notTransmission}</p></li>;
   });
 
   return (

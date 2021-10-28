@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <HeaderSection className="header">
-      <div className="HeaderImage">
+      <div className="headerImage">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="812"
@@ -42,44 +42,22 @@ const Header = () => {
 }
 
 const HeaderSection = styled.section`
-  text-align: center;
   background-color: #f39626;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
 
-  .HeaderImage {
-    margin: auto 2rem;
-    padding: 2rem;
+  .headerImage {
+    margin: 0 20px;
   }
 
   svg {
     max-width: 100%;
     width: 100%;
   }
-
-  :after {
-    display: block;
-    position: absolute;
-    content: "";
-    background: url("./img/header-border.svg") bottom no-repeat;
-    background-size: cover;
-    height: 40px;
-    width: 100%;
-    z-index: 0;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 10em 0;
-
-    :after {
-      display: block;
-      bottom: -130px;
-      position: absolute;
-      content: "";
-      background: url("./img/header-border.svg") bottom no-repeat;
-      background-size: cover;
-      height: 40px;
-      width: 100%;
-      z-index: 0;
-    }
   }
 `;
 

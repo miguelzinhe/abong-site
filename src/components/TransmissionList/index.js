@@ -11,10 +11,8 @@ const TransmissionList = () => {
   ];
 
   const transmissionList = transmissions.map((transmission) => {
-    return <li>{transmission}</li>;
+    return <li><p>{transmission}</p></li>;
   });
-
-  
 
   return (
     <div className="TransmissionList">

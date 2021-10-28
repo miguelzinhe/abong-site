@@ -1,5 +1,6 @@
 import React from 'react';
-import LateralMenu from "./components/LateralMenu";
+import ReactFullpage from '@fullpage/react-fullpage';
+
 import Header from "./containers/Header";
 import Advocacy from './containers/Advocacy';
 import Glossary from './containers/Glossary';
@@ -11,28 +12,42 @@ import VirusTransmissionExplanation from './containers/VirusTransmissionExplanat
 function App() {
   return (
     <main className="App">
-      <LateralMenu/>
-      <div id='slide1'>
-        <Header />
-      </div>
-      <div id='slide2'>
-        <Presentation /> 
-      </div>
-      <div id='slide3'>
-        <Timeline /> 
-      </div >
-      <div id='slide4'>
-        <Glossary />
-      </div>
-      <div id='slide5'>
-        <VirusTransmissionExplanation />
-      </div>
-      <div id='slide6'>
-        <PreventionExplanation />
-      </div>
-      <div id='slide7'>
-        <Advocacy />
-      </div>
+      <ReactFullpage
+        scrollOverflow={true}
+        css3={true}
+        navigation={true}
+        navigationPosition={'left'}
+        keyboardScrolling={false}
+        render={({ state }) => {
+          return (
+            <>
+              <div>
+                <div id='slide1' className="section">
+                  <Header />
+                </div>
+                <div id='slide2' className="section">
+                  <Presentation />
+                </div>
+                <div id='slide3' className="section">
+                  <Timeline />
+                </div >
+                <div id='slide4' className="section">
+                  <Glossary />
+                </div>
+                <div id='slide5' className="section">
+                  <VirusTransmissionExplanation />
+                </div>
+                <div id='slide6' className="section">
+                  <PreventionExplanation />
+                </div>
+                <div id='slide7' className="section">
+                  <Advocacy />
+                </div>
+              </div>
+            </>
+          );
+        }}
+      />
     </main>
   );
 }

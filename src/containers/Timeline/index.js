@@ -29,28 +29,29 @@ const Timeline = () => {
             <h4>
               <span>1983</span>
             </h4>
-            <p>
-              Publicada em 12 de julho no Jornal do Brasil a 1ª notícia de caso
-              de aids no país: “Brasil registra dois casos de câncer gay”.
-            </p>
-          </div>
-
-          <div className="timeline-img">
-            <img src={PesteGayImg} alt="Logo" />
+            <div className="yearsContainer">
+              <p>
+                Publicada em 12 de julho no Jornal do Brasil a 1ª notícia de caso
+                de aids no país: “Brasil registra dois casos de câncer gay”.
+              </p>
+              <img src={PesteGayImg} alt="Peste Gay Manchete Jornal" />
+            </div>
           </div>
 
           <div className="years">
             <h4>
               <span>1985</span>
             </h4>
-            <p>
-              1º caso de transmissão vertical (mãe-bebê) de aids no Brasil.{" "}
-              <br />
-              —
-              <br />
-              Surge a primeira ONG de luta contra a aids: GAPA-SP, Grupo de
-              Apoio e Prevenção à Aids.
-            </p>
+            <div className="yearsContainer">
+              <p>
+                1º caso de transmissão vertical (mãe-bebê) de aids no Brasil.{" "}
+                <br />
+                —
+                <br />
+                Surge a primeira ONG de luta contra a aids: GAPA-SP, Grupo de
+                Apoio e Prevenção à Aids.
+              </p>
+            </div>
           </div>
         </FirstFaseText>
       </FirstFase>
@@ -61,22 +62,28 @@ const Timeline = () => {
             <h4>
               <span>1991</span>
             </h4>
-            <p>
-              Realização do I Encontro Nacional de Pessoas Vivendo com Aids
-              <br />
-              —
-              <br />O “Lacinho Vermelho” torna-se o símbolo mundial de luta
-              contra a aids.
-            </p>
+            <div className="yearsContainer">
+
+              <p>
+                Realização do I Encontro Nacional de Pessoas Vivendo com Aids
+                <br />
+                —
+                <br />O “Lacinho Vermelho” torna-se o símbolo mundial de luta
+                contra a aids.
+              </p>
+            </div>
           </div>
           <div className="years">
             <h4>
               <span>1995</span>
             </h4>
-            <p>
-              Nascimento do Plano Nacional de Cooperação Técnica Horizontal
-              entre países da América Latina.
-            </p>
+            <div className="yearsContainer">
+
+              <p>
+                Nascimento do Plano Nacional de Cooperação Técnica Horizontal
+                entre países da América Latina.
+              </p>
+            </div>
           </div>
         </SecondFaseText>
       </SecondFase>
@@ -87,19 +94,24 @@ const Timeline = () => {
             <h4>
               <span>2002</span>
             </h4>
-            <p>
-              Norma Técnica nº 01/2002, do Ministério da Saúde, garante parceria
-              com ONG na Política de Incentivo HIV/Aids e outras DSTs.
-            </p>
+            <div className="yearsContainer">
+
+              <p>
+                Norma Técnica nº 01/2002, do Ministério da Saúde, garante parceria
+                com ONG na Política de Incentivo HIV/Aids e outras DSTs.
+              </p>
+            </div>
           </div>
           <div className="years">
             <h4>
               <span>2013</span>
             </h4>
-            <p>
-              Regulamentação dos serviços de atendimento e atenção às DSTs, HIV
-              e Aids.
-            </p>
+            <div className="yearsContainer">
+              <p>
+                Regulamentação dos serviços de atendimento e atenção às DSTs, HIV
+                e Aids.
+              </p>
+            </div>
           </div>
         </ThirdFaseText>
       </ThirdFase>
@@ -123,8 +135,10 @@ const TimelineSection = styled.section`
 
   .years {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .years h4 {
@@ -142,6 +156,14 @@ const TimelineSection = styled.section`
     margin-top: 2rem;
   }
 
+  .yearsContainer {
+    max-width: 426px;
+  }
+  
+  .yearsContainer img {
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
     .timeline-img img {
       width: 100%;
@@ -149,28 +171,24 @@ const TimelineSection = styled.section`
   }
 
   @media (min-width: 762px) {
-    .years {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      grid-auto-rows: minmax(100px, auto);
-    }
 
     .years h4 {
-      grid-column: 1 / 1;
-      grid-row: 1;
+      margin-bottom: 20px;
     }
 
-    .years p {
-      grid-column: 2 / 4;
-      grid-row: 1 /2;
-      padding-left: 4rem;
+    .years p,
+    .years img {
       margin-top: 0;
+    }
+
+    .years img {
+      margin-top: 25px;
+      mix-blend-mode: multiply;
     }
 
     .timeline-img {
       text-align: right;
-      margin-bottom: 10rem;
+      margin-bottom: 5rem;
     }
   }
 
@@ -184,6 +202,9 @@ const TimelineSection = styled.section`
 const FirstFase = styled.div`
   background-color: #fddcb5;
   position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
 
   :before {
     display: block;
@@ -209,20 +230,19 @@ const FirstFase = styled.div`
 `;
 
 const FirstFaseText = styled.div`
-  margin: auto 3rem;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70vw;
 
   .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .wrapper h2 {
-    grid-column: 1 / 4;
-    grid-row: 1;
     font: normal normal normal 60px/60px Rubik;
     font-weight: 500;
     text-align: left;
@@ -231,8 +251,6 @@ const FirstFaseText = styled.div`
   }
 
   .wrapper h3 {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
     font: normal normal normal 23px/25px Rubik;
     font-weight: 800;
     text-align: right;
@@ -254,21 +272,26 @@ const FirstFaseText = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin: auto 30rem;
+    margin: auto 15rem;
   }
 `;
 
 const SecondFase = styled.div`
   background-color: #fabc73;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
 `;
 
 const SecondFaseText = styled.div`
-  margin: auto 3rem;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70vw;
 
   @media (min-width: 1440px) {
-    margin: auto 30rem;
+    margin: auto 15rem;
   }
 `;
 
@@ -276,6 +299,9 @@ const ThirdFase = styled.div`
   background-color: #f7a84b;
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
 
   :before {
     display: block;
@@ -303,12 +329,13 @@ const ThirdFase = styled.div`
 `;
 
 const ThirdFaseText = styled.div`
-  margin: auto 3rem;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70vw;
 
   @media (min-width: 1440px) {
-    margin: auto 30rem;
+    margin: auto 15rem;
   }
 `;
 
