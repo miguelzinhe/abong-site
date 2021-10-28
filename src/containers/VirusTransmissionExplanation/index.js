@@ -64,7 +64,7 @@ const VirusTransmissionText = styled.div`
   color: #fff;
   padding: 5rem 0;
   @media (min-width: 720px) {
-    width: 70vw;
+    width: 60vw;
   }
 
   h2 {

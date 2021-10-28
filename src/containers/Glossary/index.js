@@ -1,63 +1,64 @@
-import React from "react";
+import React from 'react';
 import styled from "styled-components";
-import GlossaryCarousel from "../../components/GlossaryCarousel";
-
+import GlossaryCarousel from '../../components/GlossaryCarousel';
 
 const Glossary = () => {
+  const page = {
+    title: "O Be A Ba da AIDS",
+  };
   return (
-    <GlossarySection>
-      <div className="glossaryWrapper">
-      <h2 className="glossary-title">
-        <span> O BE A <br/> BA DA AIDS </span>
-      </h2>
+    <PreventionExplanationSection className="Glossary">
+      <GlossaryText className="GlossaryText">
+        <h2>
+          {page.title}
+        </h2>
+      </GlossaryText>
       <GlossaryCarousel />
-      </div>
-    </GlossarySection>
+    </PreventionExplanationSection>
   );
-};
+}
 
-const GlossarySection = styled.section`
+const PreventionExplanationSection = styled.section`
+  position: relative;
   display: flex;
   justify-content: center;
-  margin: 0 20px;
-  font: normal normal normal 28px/32px Rubik;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+`;
+
+const GlossaryText = styled.div`
+  margin: 0 auto;
   color: #00b4c9;
-  padding: 3rem 0;
-  align-items: center;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 
-  .glossaryWrapper {
-    @media (min-width: 720px) {
-      width: 70vw;
-    }
-  
-    display: flex;
-    @media (max-width: 982px) {
-      flex-wrap: wrap;
-    }
+  @media (min-width: 720px) {
+    width: 60vw;
   }
 
-  .glossary-title {
+  h2 {
     position: relative;
-    font: normal 5rem/5rem Rubik;
+    font: normal normal Rubik;
+    font-size: 5rem;
     font-weight: 500;
-    letter-spacing: 0px;
-    text-align: left;
-    padding-bottom: 1rem;
-    margin-bottom: 4rem;
-    width: 100%;
-    padding: 0 1rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
   }
 
-  @media (min-width: 1000px) {
-    .glossary-title span:after {
-      position: absolute;
-      content: "";
-      border: 0.5rem solid #00b4c9;
-      width: 60%;
-      left: 0;
-      top: 16rem;
-      margin: 0 1rem;
-    }
+  h2:after {
+    position: absolute;
+    content: "";
+    border: 0.5rem solid #00b4c9;
+    width: 42%;
+    left: 0;
+    bottom: -1.4rem;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 3rem;
   }
 `;
 

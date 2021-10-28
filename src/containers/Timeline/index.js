@@ -233,7 +233,7 @@ const FirstFaseText = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 70vw;
+  width: 60vw;
 
   .wrapper {
     display: flex;
@@ -288,7 +288,7 @@ const SecondFaseText = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 70vw;
+  width: 60vw;
 
   @media (min-width: 1440px) {
     margin: auto 15rem;
@@ -332,7 +332,7 @@ const ThirdFaseText = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 70vw;
+  width: 60vw;
 
   @media (min-width: 1440px) {
     margin: auto 15rem;

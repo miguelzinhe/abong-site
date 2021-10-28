@@ -27,7 +27,7 @@ const PreventionExplanationSection = styled.section`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  padding-bottom: 8rem;
+  padding: 6rem 0;
 `;
 
 const PreventionText = styled.div`
@@ -38,7 +38,7 @@ const PreventionText = styled.div`
   display: flex;
   flex-direction: column;
   @media (min-width: 720px) {
-    width: 70vw;
+    width: 60vw;
   }
 
   h2 {

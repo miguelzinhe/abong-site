@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactFullpage from '@fullpage/react-fullpage';
 
 import Header from "./containers/Header";
 import Advocacy from './containers/Advocacy';
@@ -12,14 +11,6 @@ import VirusTransmissionExplanation from './containers/VirusTransmissionExplanat
 function App() {
   return (
     <main className="App">
-      <ReactFullpage
-        scrollOverflow={true}
-        css3={true}
-        navigation={true}
-        navigationPosition={'left'}
-        keyboardScrolling={false}
-        render={({ state }) => {
-          return (
             <>
               <div>
                 <div id='slide1' className="section">
@@ -46,8 +37,6 @@ function App() {
               </div>
             </>
           );
-        }}
-      />
     </main>
   );
 }

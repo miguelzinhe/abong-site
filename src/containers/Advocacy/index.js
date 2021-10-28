@@ -54,8 +54,8 @@ const Advocacy = () => {
   ]
   const onDownload = () => {
     const link = document.createElement("a");
-    link.download = `cartilha.pdf`;
-    link.href = "./assets/cartilha.pdf";
+    link.download = `abong-cartilhahiv.pdf`;
+    link.href = "./assets/abong-cartilhahiv.pdf";
     link.click();
   };
 
@@ -161,7 +161,7 @@ const AdvocacyText = styled.div`
   color: #f39626;
 
   @media (min-width: 720px) {
-    width: 70vw;
+    width: 60vw;
   }
 
   h2 {
