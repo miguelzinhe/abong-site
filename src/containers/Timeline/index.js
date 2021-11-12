@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import PesteGayImg from "../../images/peste-gay.png";
 import Hemoglobine from "../../images/hemoglobine.png";
+import DiaMundial from "../../images/1988_DiaMundial.jpg";
+import EncontroNacional from "../../images/1991_EncontroNacional.jpg";
+import Remedios from "../../images/1996_Remedios.jpg";
+import NormaTecnica from "../../images/2002_NormaTecnica.jpg";
+import LeiDiscriminacao from "../../images/2014_LeiDiscriminacao.jpg";
 
 const Timeline = () => {
   return (
@@ -51,6 +56,7 @@ const Timeline = () => {
                 Surge a primeira ONG de luta contra a aids: GAPA-SP, Grupo de
                 Apoio e Prevenção à Aids.
               </p>
+              <img src={DiaMundial} alt="Peste Gay Manchete Jornal" />
             </div>
           </div>
         </FirstFaseText>
@@ -71,6 +77,7 @@ const Timeline = () => {
                 <br />O “Lacinho Vermelho” torna-se o símbolo mundial de luta
                 contra a aids.
               </p>
+              <img src={EncontroNacional} alt="Encontro Nacional" />
             </div>
           </div>
           <div className="years">
@@ -83,6 +90,7 @@ const Timeline = () => {
                 Nascimento do Plano Nacional de Cooperação Técnica Horizontal
                 entre países da América Latina.
               </p>
+              <img src={Remedios} alt="Remedios" />
             </div>
           </div>
         </SecondFaseText>
@@ -100,6 +108,7 @@ const Timeline = () => {
                 Norma Técnica nº 01/2002, do Ministério da Saúde, garante parceria
                 com ONG na Política de Incentivo HIV/Aids e outras DSTs.
               </p>
+              <img src={NormaTecnica} alt="Norma Tecnica" />
             </div>
           </div>
           <div className="years">
@@ -111,6 +120,7 @@ const Timeline = () => {
                 Regulamentação dos serviços de atendimento e atenção às DSTs, HIV
                 e Aids.
               </p>
+              <img src={LeiDiscriminacao} alt="LeiDiscriminacao" />
             </div>
           </div>
         </ThirdFaseText>
